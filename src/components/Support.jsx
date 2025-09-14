@@ -79,7 +79,7 @@ export default function Support() {
                 for students.
               </p>
               <a
-                href="https://jedfoundation.org/campus-resources/"
+                href="https://www.iitk.ac.in/counsel/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-green-700 hover:underline text-sm"
