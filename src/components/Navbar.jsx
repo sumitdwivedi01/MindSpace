@@ -1,38 +1,42 @@
 import React, { useState } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white/70 backdrop-blur-md shadow-md fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed w-full top-0 z-50 bg-gradient-to-r from-green-50/80 via-green-100/70 to-green-200/80 backdrop-blur-md shadow-lg border-b border-green-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex items-center justify-between h-16">
           {/* Brand */}
-          <div className="flex-shrink-0 text-2xl font-bold text-indigo-600 !no-underline">
-            <Link to="/"  className="!no-underline text-gray-700  hover:text-indigo-600 transition">
-            MindSpace
+          <div className="flex-shrink-0">
+            <Link
+              to="/"
+              className="text-3xl font-extrabold bg-gradient-to-r from-green-600 via-green-500 to-emerald-500 bg-clip-text text-transparent tracking-wide hover:scale-105 transition-transform duration-300"
+            >
+              MindSpace
             </Link>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
-               className="!no-underline !text-gray-700  hover:!text-indigo-600  !transition"
+              className="text-gray-700 hover:text-green-600 font-medium transition-colors"
             >
               Home
             </Link>
             <Link
               to="/about"
-               className="!no-underline !text-gray-700  hover:!text-indigo-600  !transition"
+              className="text-gray-700 hover:text-green-600 font-medium transition-colors"
             >
               About
             </Link>
             <div className="flex space-x-4">
-              <button className="!px-4 !py-2 !rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 transition">
+              <button className="px-4 py-2 rounded-lg border border-green-500 text-green-600 font-semibold hover:bg-green-50 transition-all">
                 Login
               </button>
-              <button className="!px-4 !py-2 !rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+              <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all">
                 Sign Up
               </button>
             </div>
@@ -42,11 +46,10 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700  hover:text-indigo-600 focus:outline-none"
+              className="text-gray-700 hover:text-green-600 focus:outline-none transition"
             >
-              {/* Hamburger Icon */}
               <svg
-                className="h-6 w-6"
+                className="h-7 w-7"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -73,31 +76,37 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white  px-4 pt-2 pb-4 space-y-2 shadow-lg">
+      {/* Mobile Dropdown */}
+      <div
+        className={`md:hidden bg-white/90 backdrop-blur-md border-t border-green-200 shadow-xl transition-all duration-500 overflow-hidden ${
+          isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-6 py-4 space-y-4">
           <Link
             to="/"
-            className=" !no-underline block text-gray-700  hover:text-indigo-600  transition"
+            className="block text-gray-700 hover:text-green-600 font-medium transition"
+            onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
             to="/about"
-            className=" !no-underline block text-gray-700  hover:text-indigo-600  transition"
+            className="block text-gray-700 hover:text-green-600 font-medium transition"
+            onClick={() => setIsOpen(false)}
           >
             About
           </Link>
           <div className="flex space-x-4">
-            <button className="flex-1 px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 transition">
+            <button className="flex-1 px-4 py-2 rounded-lg border border-green-500 text-green-600 font-semibold hover:bg-green-50 transition-all">
               Login
             </button>
-            <button className="flex-1 px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+            <button className="flex-1 px-4 py-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all">
               Sign Up
             </button>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

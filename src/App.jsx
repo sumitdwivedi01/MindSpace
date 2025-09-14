@@ -7,10 +7,16 @@ import Music from "./components/Music";
 import Dashboard from "./components/Dashboard";
 import Resources from "./components/Resources";
 import Support from "./components/support";
-
+import { useEffect } from "react";
 function App() {
+  useEffect(() => {
+    // document.body.style.background = "linear-gradient(135deg, #a8e6cf, #dcedc1)";
+    // document.body.style.background = "linear-gradient(135deg, #b7e4c7, #e9f5db)";
+    document.body.style.background = "linear-gradient(135deg, #d9f99d, #86efac)";
+  }, []);
+  
   return (
-    <div className="min-h-screen bg-green-50">
+    <div className="min-h-screen ">
       {/* Global navbar (always visible) */}
       <Navbar />
 

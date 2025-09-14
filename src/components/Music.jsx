@@ -73,9 +73,9 @@ const Music = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-green-100 to-green-200 flex flex-col items-center p-6">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-green-100 to-green-200 flex flex-col items-center p-6 sm:mx-10 rounded-3xl">
       <h1 className="text-3xl font-extrabold text-green-800 mb-8 drop-shadow-md">
-        🌿 Relaxing Music
+        🌿 CalmWaves
       </h1>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl">

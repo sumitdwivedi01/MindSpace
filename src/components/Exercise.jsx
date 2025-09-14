@@ -195,7 +195,7 @@ export default function Exercise({ stageDuration = stageDurationDefault }) {
           className={`rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center transition-all`}
         >
           <div
-            className={`w-full max-w-md rounded-2xl p-6`}
+            className={`w-full max-w-md rounded-2xl p-6 bg-green-50`}
             // subtle background gradient based on stage
             style={{
               background: `linear-gradient(135deg, ${color.hex}22 0%, #f0faf5 100%)`,

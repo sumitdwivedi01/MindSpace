@@ -59,7 +59,7 @@ const resources = [
 
 export default function Resources() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-100 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-100 p-6 sm:mx-10 rounded-3xl">
       <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">
         Valuable Resources for Students 🌱
       </h1>
