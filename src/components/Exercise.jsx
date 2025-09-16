@@ -1,5 +1,7 @@
 // Exercise.jsx
 import React, { useState, useRef, useEffect } from "react";
+import BubbleGame from "./BubbleGame";
+
 
 /**
  * Breathing exercise: 3 stages (Inhale, Hold, Exhale)
@@ -290,6 +292,12 @@ export default function Exercise({ stageDuration = stageDurationDefault }) {
           {/* Completion message */}
           {completed && <CompletionCard />}
         </div>
+                {/* Stress Relief Game */}
+        <div className="mt-8">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">Stress-Busting Game</h3>
+          <BubbleGame />
+        </div>
+
 
         {/* Right: quick relaxation techniques */}
         <div className="rounded-2xl p-6 bg-white shadow-lg">
