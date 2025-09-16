@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from "../assets/MindSpace_Logo.png"; // Adjust the path as necessary
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,7 @@ const Navbar = () => {
               to="/"
               className="text-3xl font-extrabold bg-gradient-to-r from-green-600 via-green-500 to-emerald-500 bg-clip-text text-transparent tracking-wide hover:scale-105 transition-transform duration-300"
             >
+              <img src="Logo" alt="" />
               MindSpace
             </Link>
           </div>
@@ -33,12 +35,16 @@ const Navbar = () => {
               About
             </Link>
             <div className="flex space-x-4">
+              <Link to="/login">
               <button className="px-4 py-2 rounded-lg border border-green-500 text-green-600 font-semibold hover:bg-green-50 transition-all">
                 Login
               </button>
+              </Link>
+              <Link to="/signup">
               <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all">
                 Sign Up
               </button>
+              </Link>
             </div>
           </div>
 

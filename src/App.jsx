@@ -8,6 +8,9 @@ import Dashboard from "./components/Dashboard";
 import Resources from "./components/Resources";
 import Support from "./components/support";
 import { useEffect } from "react";
+import EmergencyBtn from "./components/EmergencyBtn";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 function App() {
   useEffect(() => {
     // document.body.style.background = "linear-gradient(135deg, #a8e6cf, #dcedc1)";
@@ -20,7 +23,7 @@ function App() {
       {/* Global navbar (always visible) */}
       <Navbar />
 
-      <main className="pt-20 text-center">
+      <main className="pt-16 text-center">
         <Routes>
           <Route path="/" element={<Homepage />} >
             {/* Parent Route */}
@@ -33,7 +36,10 @@ function App() {
           </Route>
 
           <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
+        <EmergencyBtn/>
       </main>
     </div>
   );

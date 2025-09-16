@@ -13,7 +13,7 @@ const HomeNav = () => {
     <nav className="px-6 py-4 bg-cyan-50 shadow-md rounded-lg lg:mx-32 my-3">
       <div className="text-shadow-md text-xl flex justify-center space-x-12">
         <Link to="/" className={`text-gray-700 hover:text-gray-400 transition ${isActive('/')}`}>Dashboard</Link>
-        <Link to="/exercise" className={`text-gray-700 hover:text-gray-400 transition ${isActive('/exercise')}`}>Exercise</Link>
+        <Link to="/exercise" className={`text-gray-700 hover:text-gray-400 transition ${isActive('/exercise')}`}>MindGames</Link>
         <Link to="/music" className={`text-gray-700 hover:text-gray-400 transition ${isActive('/music')}`}>MindTunes</Link>
         <Link to="/resources" className={`text-gray-700 hover:text-gray-400 transition ${isActive('/resources')}`}>Resources</Link>
         <Link to="/support" className={`text-gray-700 hover:text-gray-400 transition ${isActive('/support')}`}>Support</Link>

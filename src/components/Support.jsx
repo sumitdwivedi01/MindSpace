@@ -22,8 +22,7 @@ export default function Support() {
             ⚠️ Crisis Support
           </h2>
           <p className="text-gray-700 mb-6 text-sm">
-            If you're in crisis or having thoughts of self-harm, please reach
-            out immediately. Help is available 24/7 and you are not alone.
+            Free, 24/7 mental health support. Call 14416 to connect with a counsellor. We're here to listen. Available in 20+ languages.
           </p>
 
           <div className="space-y-4">
@@ -31,15 +30,19 @@ export default function Support() {
               <h3 className="font-semibold text-gray-800 flex items-center gap-2">
                 📞 National Suicide Prevention Lifeline
               </h3>
-              <p className="text-sm text-gray-600 mb-2">
+              <p className=" text-gray-600 mb-2 mt-1 text-md">
                 24/7 free and confidential support
               </p>
               <a
-                href="tel:988"
-                className="inline-block bg-red-600 text-white px-4 py-1 rounded-full text-sm hover:bg-red-700 transition"
+                href="tel:14416"
+                className="inline-block mt-2 bg-red-600 text-white px-4 py-1 rounded-full text-sm hover:bg-red-700 transition"
               >
-                Call 988
+                Call 14416
               </a>
+              <a href="https://telemanas.mohfw.gov.in/home"
+                className=" block mt-2 text-green-700 hover:underline text-sm"
+                target="_blank"
+              >Visit Site→ </a>
             </div>
 
             <div className="bg-white rounded-xl shadow p-4 hover:shadow-lg transition">

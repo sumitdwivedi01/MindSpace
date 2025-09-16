@@ -202,7 +202,7 @@ export default function Exercise({ stageDuration = stageDurationDefault }) {
             }}
           >
             <h2 className="text-lg font-semibold text-gray-800 text-center mb-4">
-              Guided Breathing
+              Breath With Me
             </h2>
 
             {/* SVG spinner + center circle */}
@@ -265,7 +265,7 @@ export default function Exercise({ stageDuration = stageDurationDefault }) {
                   onClick={start}
                   className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-600 text-white hover:bg-green-700 transition"
                 >
-                  <span className="text-sm font-medium">Start Exercise</span>
+                  <span className="text-sm font-medium">Start Breathing</span>
                 </button>
               ) : (
                 <button
